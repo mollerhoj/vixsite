@@ -1,4 +1,4 @@
-const cacheName = "precache-v1"
+const cacheName = "precache-v2"
 const cacheUrls = [
   './',
   'output.dat',

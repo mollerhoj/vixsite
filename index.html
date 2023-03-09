@@ -3,16 +3,28 @@
   <head>
   </head>
   <body>
-    <h1>Test4</h1>
+    <h1>Test5</h1>
     <script>
       // Check if service workers are available. (
       if ('serviceWorker' in navigator) {
         // Register the service worker script
         navigator.serviceWorker.register('service-worker.js');
       }
+
+      
+      function myFunction() {
+        document.getElementById("img1").src = "img.png"
+      }
+
+      function myFunction2() {
+        document.getElementById("img2").src = "cake.jpeg"
+      }
+      
     </script>
     <a href="output.dat">Output</a>
-    <img src="img.png"></img>
-    <img src="cake.jpeg"></img>
+    <img id="img1"></img>
+    <img id="img2"></img>
+    <button onclick="myFunction()">Click me</button>
+    <button onclick="myFunction2()">Click me2</button>
   </body>
 </html>
