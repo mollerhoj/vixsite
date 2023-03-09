@@ -2,6 +2,7 @@ const cacheName = "precache-v1"
 const cacheUrls = [
   './',
   'output.dat',
+  'img.png',
 ];
 
 self.addEventListener('install', e => {
