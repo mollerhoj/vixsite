@@ -1,6 +1,7 @@
 const cacheName = "precache-v1"
 const cacheUrls = [
-  'output.dat'
+  './',
+  'output.dat',
 ];
 
 self.addEventListener('install', e => {
@@ -13,6 +14,7 @@ self.addEventListener('install', e => {
 });
 
 self.addEventListener('activate', e => {
+  console.log('activate');
   e.waitUntil(
     caches.keys().then(keys => {
       return keys.filter(key => key !== cacheName);
@@ -25,6 +27,7 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
+  console.log('fetch');
   if (!e.request.url.startsWith(self.location.origin)) {
     return
   }
