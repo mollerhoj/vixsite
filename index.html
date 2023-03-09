@@ -1,1 +1,16 @@
-<h1>Test</h1>
+
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Test</h1>
+    <script>
+      // Check if service workers are available. (
+      if ('serviceWorker' in navigator) {
+        // Register the service worker script
+        navigator.serviceWorker.register('service-worker.js');
+      }
+    </script>
+    <a href="output.dat">Output</a>
+  </body>
+</html>
