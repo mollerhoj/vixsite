@@ -34,6 +34,7 @@ self.addEventListener('fetch', e => {
       if (cachedResponse) {
         return cachedResponse;
       }
+      return fetch(e.request)
     })
   );
 });
